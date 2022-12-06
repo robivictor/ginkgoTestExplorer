@@ -162,7 +162,7 @@ export class GinkgoTest {
         outputChannel.appendLine(`Running '${spec}' on debugging.`);
 
         const reportFile = this.prepareReportFile(cwd);
-        const debugArgs: any = ['-ginkgo.debug', '-ginkgo.reportFile', reportFile, '-ginkgo.focus', spec];
+        const debugArgs: any = ['-ginkgo.junit-report', reportFile, '-ginkgo.focus', spec];
         const debugConfig: vscode.DebugConfiguration = {
             name: `Debug Test ${document?.fileName}`,
             type: 'go',
